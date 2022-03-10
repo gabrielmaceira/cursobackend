@@ -15,6 +15,8 @@ server.on("error", error => console.log(`Error en servidor ${error}`))
 
 app.use('/api/productos', router)
 app.use('/static', express.static(__dirname + '/public'));
+app.use(express.json())
+router.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 router.use(express.urlencoded({ extended: true }))
 
@@ -42,6 +44,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+    console.log(req.body)
     try {
         const newProduct = listaProductos.addProduct(req.body)
         res.send(newProduct)
