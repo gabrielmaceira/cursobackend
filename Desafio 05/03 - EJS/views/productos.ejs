@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <div id="results-table">
+            <% if (allProducts.length> 0) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Thumbnail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i=0; i < allProducts.length; i++){ %>
+                            <tr>
+                                <td>
+                                    <%- allProducts[i].title -%>
+                                </td>
+                                <td>
+                                    <%- allProducts[i].price -%>
+                                </td>
+                                <td><img src=<%- allProducts[i].thumbnail -%> alt=<%- allProducts[i].title -%>
+                                        height="60px" /></td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+                <%} else { %>
+                    <h2> No hay productos. </h2>
+                    <% } %>
+
+        </div>
+        <a class="btn btn-primary mt-4" href="/">IR A FORM</a>
+    </main>
+</body>
+
+</html>

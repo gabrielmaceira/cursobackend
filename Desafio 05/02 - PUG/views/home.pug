@@ -17,21 +17,5 @@ html
                 div(class="form-group")
                     label(for="thumbnail")="Thumbnail"
                     input(type="url" class="form-control" name="thumbnail" placeholder="Ingresar url thumbnail" required)
-                button(type="submit" class="btn btn-primary")="Enviar" 
-            div(id="results-table")
-                if allProducts.length > 0
-                    table(class="table")
-                        thead
-                            tr
-                                th(scope="col")="Titulo"
-                                th(scope="col")="Precio"
-                                th(scope="col")="Thumbnail"
-                        tbody
-                            each item in allProducts
-                                tr
-                                    td=item.title
-                                    td=item.price
-                                    td
-                                        img(src=item.thumbnail alt=item.title height="60px")
-                else
-                    h2="No hay productos."
+                button(type="submit" class="btn btn-primary")="Enviar"
+            a(class="btn btn-primary mt-4" href="/productos")="IR A PRODUCTOS"

@@ -30,36 +30,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-
-        <div id="results-table">
-            <% if (allProducts.length> 0) { %>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Titulo</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Thumbnail</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for (let i=0; i < allProducts.length; i++){ %>
-                            <tr>
-                                <td>
-                                    <%- allProducts[i].title -%>
-                                </td>
-                                <td>
-                                    <%- allProducts[i].price -%>
-                                </td>
-                                <td><img src=<%- allProducts[i].thumbnail -%> alt=<%- allProducts[i].title -%> height="60px" /></td>
-                            </tr>
-                            <% } %>
-                    </tbody>
-                </table>
-                <%} else { %>
-                    <h2> No hay productos. </h2>
-                    <% } %>
-
-        </div>
+        <a class="btn btn-primary mt-4" href="/productos">IR A PRODUCTOS</a>
     </main>
 </body>
 

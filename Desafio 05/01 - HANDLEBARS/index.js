@@ -15,10 +15,19 @@ app.use(express.urlencoded({ extended: true }))
 
 const listaProductos = new Products()
 
+app.get('/', (req, res) => {
+    try {
+        res.render('home')
+    }
+    catch (err) {
+        res.status(400).send(err)
+    }
+})
+
 app.get('/productos', (req, res) => {
     try {
         const allProducts = listaProductos.getAllProducts()
-        res.render('home', {allProducts})
+        res.render('productos', {allProducts})
     }
     catch (err) {
         res.status(400).send(err)
