@@ -52,7 +52,7 @@ document.getElementById("chat-form").addEventListener('submit', event => {
 
     const newMessage = {
         mail: document.getElementById('input-mail').value,
-        timestamp: new Date(),
+        timestamp: moment().format('DD/MM/YYYY hh:mm:ss a'),
         text: document.getElementById('input-text').value
     };
 
