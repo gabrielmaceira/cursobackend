@@ -1,0 +1,8 @@
+    {{#each chatMessages}}
+    <div class="row">
+        <p> <span class="chat-mail">{{this.mail}}</span>
+            <span class="chat-timestamp">[{{this.timestamp}}]: </span>
+            <span class="chat-text">{{this.text}}</span>
+        </p>
+    </div>
+    {{/each}}

@@ -1,0 +1,35 @@
+.chat-mail {
+    font-weight: bold;
+    color: blue;
+}
+
+.chat-timestamp {
+    color: brown;
+}
+
+.chat-text {
+    color: green;
+    font-style: italic;
+}
+
+.chat-box {
+    border-radius: 8px;
+    border: 1px solid gray;
+    height: 400px;
+    max-height: 75vh;
+    margin-bottom: 15px;
+    overflow-y: scroll;
+}
+
+#page-chat div {
+    padding: 0px 15px;
+    margin: 0px
+}
+
+#page-chat div:first-of-type {
+    padding-top: 10px;
+}
+
+#page-chat div:last-of-type {
+    padding-bottom: 10px;
+}
