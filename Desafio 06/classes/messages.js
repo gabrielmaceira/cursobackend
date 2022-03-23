@@ -6,7 +6,7 @@ module.exports = class Messages {
     this.fileName = fileName;
   }
 
-  save = async (message) => {
+  async save(message) {
     let initialData = [];
 
     try {
@@ -39,7 +39,7 @@ module.exports = class Messages {
     }
   }
 
-  getAll = async () => {
+  async getAll() {
     try {
       const fileData = await fs.promises.readFile(this.fileName, 'utf-8')
       const parsedData = JSON.parse(fileData)
